@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-" crossorigin="anonymous" />
+    <style>
+    * {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    }
+    </style>
+</head>
+
+<header>
+    <input type="checkbox" id="toogle">
+    <div class="logo">
+        <a href="Index.html"><img src="Images/logo.png"></a>
+    </div>
+
+    <div class="menu">
+        <label for="toogle">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+    </div>
+
+    <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Product.html">Product</a></li>
+        <li><a href="Contact.html">Contact Us</a></li>
+    </ul>
+</header>
+
+<body>
+    <div class="box" id="content">
+        <img src="Images/logo.png"><br>
+        <video class="responsive-video" controls><source src="video.mp4" type="video/mp4"></video>
+        <h3>
+            <p>Contact : 04-12345678</p>
+            <p>Twitter : H.HealthPharmacy</p>
+            <p>Instagram : HHpharmacy</p>
+            <p>Email : hh.pharmacy@gmail.com</p>
+        </h3>
+
+        <br>
+    
+        <div class="light" id="calendar">
+            <div class="calendar-header">
+                <span class="month-picker" id="month-picker">January</span>
+                <div class="year-picker">
+                    <span class="year-change" id="prev-year">
+                        <pre>&lt;</pre>
+                    </span>
+                    <span id="year">2021</span>
+                    <span class="year-change" id="next-year">
+                        <pre>&gt;</pre>
+                    </span>
+                </div>
+            </div>
+            <div class="calendar-body">
+                <div class="calendar-week-day">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="calendar-days"></div>
+            </div>
+            <div class="month-list"></div>
+        </div>
+
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+
+<footer>
+    <p>&copy; HH Pharmacy Healthcare Sdn. Bhd. All rights reserved.</p>
+</footer>
+
+</html>

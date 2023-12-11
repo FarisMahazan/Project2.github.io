@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<header>
+    <input type="checkbox" id="toogle">
+    <div class="logo">
+        <a href="Index.html"><img src="Images/logo.png"></a>
+    </div>
+
+    <div id="cart-button" onclick="openCartModal()">
+        <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+
+    <div class="menu">
+        <label for="toogle">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+    </div>
+
+    <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Product.html">Product</a></li>
+        <li><a href="Contact.html">Contact Us</a></li>
+    </ul>
+</header>
+
+<body>
+    <div id="buttons">
+        <button class="btn" onclick="filterObjects('All')">All Products</button>
+        <button class="btn" onclick="filterObjects('Medicines')">Medicines</button>
+        <button class="btn" onclick="filterObjects('Perfumes')">Perfumes</button>
+        <button class="btn" onclick="filterObjects('SkinCare')">Skin Care</button>
+        <button class="btn" onclick="filterObjects('Mom&Baby')">Mom & Baby</button>
+        <button class="btn" onclick="filterObjects('MensCare')">Men's Care</button>
+    </div>
+
+    <div id="objects">
+        <div class="box Medicines" data-product="panadol" data-price="10.99">
+            <img src="Images/Products/panadol.jpg"><br>
+            <span class="product-name">Panadol</span><br>
+            <span class="product-price">RM10.99</span><br>
+            <button onclick="addToCart('panadol', 10.99, 'Panadol' )">Add to Cart</button>
+        </div>
+        <div class="box Perfumes" data-product="perfume1" data-price="20.99">
+            <img src="Images/Products/perfume1.png"><br>
+            <span class="product-name">Adidas Toilette Ice Dive 100ml</span><br>
+            <span class="product-price">RM20.99</span><br>
+            <button onclick="addToCart('perfume1', 20.99, 'Adidas Toilette Ice Dive 100ml')">Add to Cart</button>
+        </div>
+        <div class="box Medicines" data-product="lozen" data-price="5.99">
+            <img src="Images/Products/lozen.jpg"><br>
+            <span class="product-name">Strepsils Citroen & Honing</span><br>
+            <span class="product-price">RM5.99</span><br>
+            <button onclick="addToCart('lozen', 5.99, 'Strepsils Citroen & Honing')">Add to Cart</button>
+        </div>
+        <div class="box SkinCare" data-product="skincare1" data-price="15.99">
+            <img src="Images/Products/skincare1.jpg"><br>
+            <span class="product-name">Cetaphil Moisturizing Cream 453G</span><br>
+            <span class="product-price">RM15.99</span><br>
+            <button onclick="addToCart('skincare1', 15.99, 'Cetaphil Moisturizing Cream 453G')">Add to Cart</button>
+        </div>
+        <div class="box MensCare" data-product="men1" data-price="8.99">
+            <img src="Images/Products/men1.jpg"><br>
+            <span class="product-name">Clear Shampoo Men Cooling Itch Control 315ml</span><br>
+            <span class="product-price">RM8.99</span><br>
+            <button onclick="addToCart('men1', 8.99, 'Clear Shampoo Men Cooling Itch Control 315ml')">Add to Cart</button>
+        </div>
+        <div class="box Perfumes" data-product="perfume2" data-price="12.99">
+            <img src="Images/Products/perfume2.png"><br>
+            <span class="product-name">Pg Perfume Spray Lodorico (M) 30ml</span><br>
+            <span class="product-price">RM12.99</span><br>
+            <button onclick="addToCart('perfume2', 12.99, 'Pg Perfume Spray Lodorico (M) 30ml')">Add to Cart</button>
+        </div>
+        <div class="box Mom&Baby" data-product="baby1" data-price="3.99">
+            <img src="Images/Products/baby1.png"><br>
+            <span class="product-name">FAFC Kids Toothbrush RP Amber Figurine 1s</span><br>
+            <span class="product-price">RM3.99</span><br>
+            <button onclick="addToCart('baby1', 3.99, 'FAFC Kids Toothbrush RP Amber Figurine 1s')">Add to Cart</button>
+        </div>
+        <div class="box MensCare" data-product="men2" data-price="6.49">
+            <img src="Images/Products/men2.png"><br>
+            <span class="product-name">Rexona Men Deo R/O 48H V8 50ml</span><br>
+            <span class="product-price">RM6.49</span><br>
+            <button onclick="addToCart('men2', 6.49, 'Rexona Men Deo R/O 48H V8 50ml')">Add to Cart</button>
+        </div>
+        <div class="box Medicines" data-product="loratadine" data-price="9.99">
+            <img src="Images/Products/loratadine.jpg"><br>
+            <span class="product-name">Claritin Allergy Loratadine</span><br>
+            <span class="product-price">RM9.99</span><br>
+            <button onclick="addToCart('loratadine', 9.99, 'Claritin Allergy Loratadine')">Add to Cart</button>
+        </div>
+        <div class="box SkinCare" data-product="skincare2" data-price="14.49">
+            <img src="Images/Products/skincare2.jpg"><br>
+            <span class="product-name">Cetaphil Bhr Brightness Reveal Creamy Cleanser</span><br>
+            <span class="product-price">RM14.49</span><br>
+            <button onclick="addToCart('skincare2', 14.49, 'Cetaphil Bhr Brightness Reveal Creamy Cleanser')">Add to Cart</button>
+        </div>
+        <div class="box Mom&Baby" data-product="baby2" data-price="7.99">
+            <img src="Images/Products/baby2.png"><br>
+            <span class="product-name">Sudocrem Nappy Rash Cream 125g</span><br>
+            <span class="product-price">RM7.99</span><br>
+            <button onclick="addToCart('baby2', 7.99, 'Sudocrem Nappy Rash Cream 125g')">Add to Cart</button>
+        </div>
+        <div class="box Medicines" data-product="gaviscon" data-price="11.49">
+            <img src="Images/Products/gaviscon.jpg"><br>
+            <span class="product-name">Gaviscon Advance Heartburn</span><br>
+            <span class="product-price">RM11.49</span><br>
+            <button onclick="addToCart('gaviscon', 11.49, 'Gaviscon Advance Heartburn')">Add to Cart</button>
+        </div>
+        <div class="box MensCare" data-product="men3" data-price="5.99">
+            <img src="Images/Products/men3.png"><br>
+            <span class="product-name">Nivea (M) Spray B&W Invisible 150ml</span><br>
+            <span class="product-price">RM5.99</span><br>
+            <button onclick="addToCart('men3', 5.99, 'Nivea (M) Spray B&W Invisible 150ml')">Add to Cart</button>
+        </div>
+        <div class="box SkinCare" data-product="skincare3" data-price="8.99">
+            <img src="Images/Products/skincare3.jpg"><br>
+            <span class="product-name">Garnier Pure Charccoal Black Algae Mask 32G</span><br>
+            <span class="product-price">RM8.99</span><br>
+            <button onclick="addToCart('skincare3', 8.99, 'Garnier Pure Charccoal Black Algae Mask 32G')">Add to Cart</button>
+        </div>
+        <div class="box Perfumes" data-product="perfume3 data-price="15.99">
+            <img src="Images/Products/perfume3.jpg"><br>
+            <span class="product-name">Silkygirl EDT Sweetheart Always 50ml</span><br>
+            <span class="product-price">RM15.99</span><br>
+            <button onclick="addToCart('perfume3', 15.99, 'Silkygirl EDT Sweetheart Always 50ml')">Add to Cart</button>
+        </div>
+        <div class="box Mom&Baby" data-product="baby3" data-price="4.99">
+            <img src="Images/Products/baby3.png"><br>
+            <span class="product-name">Johnsons Body Wash Nourishing With Honey Refill</span><br>
+            <span class="product-price">RM4.99</span><br>
+            <button onclick="addToCart('baby3', 4.99, 'Johnsons Body Wash Nourishing With Honey Refill')">Add to Cart</button>
+        </div>
+        <div class="box SkinCare" data-product="skincare4 data-price="12.99">
+            <img src="Images/Products/skincare4.jpg"><br>
+            <span class="product-name">Garnier Bright Complete Anti Acne</span><br>
+            <span class="product-price">RM12.99</span><br>
+            <button onclick="addToCart('skincare4', 12.99, 'Garnier Bright Complete Anti Acne')">Add to Cart</button>
+        </div>
+        <div class="box Medicines" data-product="vicks" data-price="6.49">
+            <img src="Images/Products/vicks.jpg"><br>
+            <span class="product-name">Vicks</span><br>
+            <span class="product-price">RM6.49</span><br>
+            <button onclick="addToCart('vicks', 6.49, 'Vicks')">Add to Cart</button>
+        </div>
+        <div class="box MensCare" data-product="men4" data-price="3.99">
+            <img src="Images/Products/men4.jpg"><br>
+            <span class="product-name">Arko Men Blade T2 3S</span><br>
+            <span class="product-price">RM3.99</span><br>
+            <button onclick="addToCart('men4', 3.99, 'Arko Men Blade T2 3S')">Add to Cart</button>
+        </div>
+        <div class="box SkinCare" data-product="skincare5" data-price="9.99">
+            <img src="Images/Products/skincare5.jpg"><br>
+            <span class="product-name">Oxy Oil Control Charcoal Wash</span><br>
+            <span class="product-price">RM9.99</span><br>
+            <button onclick="addToCart('skincare5', 9.99, 'Oxy Oil Control Charcoal Wash')">Add to Cart</button>
+        </div>
+        <div class="box Mom&Baby" data-product="baby4" data-price="2.99">
+            <img src="Images/Products/baby4.png"><br>
+            <span class="product-name">Baby Oil</span><br>
+            <span class="product-price">RM2.99</span><br>
+            <button onclick="addToCart('baby4', 2.99, 'Baby Oil')">Add to Cart</button>
+        </div>
+        <div class="box Perfumes" data-product="perfume4" data-price="18.99">
+            <img src="Images/Products/perfume4.jpg"><br>
+            <span class="product-name">Silkygirl EDT Eternal Love 50ml</span><br>
+            <span class="product-price">RM18.99</span><br>
+            <button onclick="addToCart('perfume4', 18.99, 'Silkygirl EDT Eternal Love 50ml')">Add to Cart</button>
+        </div>
+        <div class="box MensCare" data-product="men5" data-price="14.99">
+            <img src="Images/Products/men5.png"><br>
+            <span class="product-name">Nivea Extra Whitening Pore Minimiser</span><br>
+            <span class="product-price">RM14.99</span><br>
+            <button onclick="addToCart('men5', 14.99, 'Nivea Extra Whitening Pore Minimiser')">Add to Cart</button>
+        </div>
+        <div class="box Mom&Baby" data-product="baby5" data-price="23.99">
+            <img src="Images/Products/baby5.png"><br>
+            <span class="product-name">Similac Total Comfort</span><br>
+            <span class="product-price">RM23.99</span><br>
+            <button onclick="addToCart('baby5', 23.99, 'Similac Total Comfort')">Add to Cart</button>
+        </div>
+        <div class="box Perfumes" data-product="perfume5" data-price="22.99">
+            <img src="Images/Products/perfume5.jpg"><br>
+            <span class="product-name">SG Men EDT Fantasia 100ml</span><br>
+            <span class="product-price">RM22.99</span><br>
+            <button onclick="addToCart('perfume5', 22.99, 'SG Men EDT Fantasia 100ml')">Add to Cart</button>
+        </div>
+    </div>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCartModal()">&times;</span>
+            <h2><i class="fa-solid fa-cart-shopping"></i> Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: RM<span id="cart-total">0.00</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+    
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="text/javascript" src="script.js"></script>
+
+<footer>
+    <p>&copy; HH Pharmacy Healthcare Sdn. Bhd. All rights reserved.</p>
+</footer>
+
+</html>
